@@ -95,9 +95,10 @@ public class LaptopDAOImpl implements LaptopDAO {
         if(l1!=null)
         {
             System.out.println(l1);
-            System.out.print("Enter Model Mame: ");
+            System.out.print("Enter Model Name: ");
             l1.setModel(sc.nextLine());
             System.out.println(l1);
+            System.out.println("Model Name Updated!");
         }
         else{
             System.out.println("Laptop Not Found!");
