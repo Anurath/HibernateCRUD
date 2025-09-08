@@ -23,8 +23,10 @@ public class LaptopDAOImpl implements LaptopDAO {
 
     @Override
     @Transactional
-    public void addLaptop(Laptop l) {
+    public void addLaptop(Laptop l)
+    {
         theManager.persist(l);
+        System.out.println("Laptop Added Successfully.");
     }
 
     @Override

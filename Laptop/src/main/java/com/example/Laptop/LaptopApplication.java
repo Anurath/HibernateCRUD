@@ -109,6 +109,7 @@ public class LaptopApplication {
                       {
                           case 1:
                           {
+                              sc.nextLine();
                               System.out.print("Enter the Brand: ");
                               String brand = sc.nextLine();
 
