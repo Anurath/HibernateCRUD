@@ -18,6 +18,4 @@ public interface LaptopDAO {
     public void updateModelById(int id);
 
     public void updatePriceById(int id);
-
-    public void updateLaptopById(int id);
 }

@@ -29,7 +29,7 @@ public class LaptopApplication {
 //
 //                System.out.print("Enter the Processor: ");
 //                String processor = sc.nextLine();
-//
+
 //                System.out.print("Enter Laptop Type: ");
 //                String type = sc.nextLine();
 //
@@ -58,7 +58,7 @@ public class LaptopApplication {
 //
 //            System.out.print("Enter the Laptop Id: ");
 //            Laptop l1 =  theLaptop.findById(sc.nextInt());
-//                System.out.println(l1);
+//            System.out.println(l1);
 
 //            Remove by ID
 
@@ -67,7 +67,7 @@ public class LaptopApplication {
 
 //            Find by Imie number
 
-//            System.out.print("Enter imie number to remove laptop: ");
+//            System.out.print("Enter imie number to Find laptop: ");
 //            Laptop l1 = theLaptop.findByImie(sc.nextLong());
 //            System.out.println(l1);
 
@@ -88,8 +88,103 @@ public class LaptopApplication {
 //                System.out.print("Enter Id to Update Price: ");
 //                theLaptop.updatePriceById(sc.nextInt());
 
-                  System.out.print("Enter Id to Change Laptop Information: ");
-                  theLaptop.updateLaptopById(sc.nextInt());
+                  while(true)
+                  {
+                      System.out.println("Enter 1 to Add Laptop.");
+                      System.out.println("Enter 2 to Find Laptop By ID.");
+                      System.out.println("Enter 3 to Find Laptop By IMIE.");
+                      System.out.println("Enter 4 to Delete Laptop By ID.");
+                      System.out.println("Enter 5 to Delete Laptop By IMIE.");
+                      System.out.println("Enter 6 to Update Brand By ID.");
+                      System.out.println("Enter 7 to Update Model By ID.");
+                      System.out.println("Enter 8 to Update Price By ID.");
+                      System.out.println("Enter 9 to Exit.");
+                      System.out.print("Enter Above Option: ");
+                      int opt = sc.nextInt();
+                      if (opt==9)
+                      {
+                          break;
+                      }
+                      switch (opt)
+                      {
+                          case 1:
+                          {
+                              System.out.print("Enter the Brand: ");
+                              String brand = sc.nextLine();
+
+                              System.out.print("Enter the Model: ");
+                              String model = sc.nextLine();
+
+                              System.out.print("Enter the Processor: ");
+                              String processor = sc.nextLine();
+
+                              System.out.print("Enter Laptop Type: ");
+                              String type = sc.nextLine();
+
+                              System.out.print("Enter the IMIE number: ");
+                              long imie = sc.nextLong();
+
+                              System.out.print("Enter the Price: ");
+                              double price = sc.nextDouble();
+                              sc.nextLine();
+
+                              System.out.print("Enter the RAM: ");
+                              int ram = sc.nextInt();
+                              sc.nextLine();
+
+                              System.out.print("Enter the ROM: ");
+                              int rom = sc.nextInt();
+                              sc.nextLine();
+                              theLaptop.addLaptop(new Laptop(brand,model,processor,type,imie,price,ram,rom));
+                              break;
+                          }
+                          case 2:
+                          {
+                              System.out.print("Enter the Laptop Id: ");
+                              Laptop l1 =  theLaptop.findById(sc.nextInt());
+                              System.out.println(l1);
+                              break;
+                          }
+                          case 3:
+                          {
+                              System.out.print("Enter imie number to Find laptop: ");
+                              Laptop l1 = theLaptop.findByImie(sc.nextLong());
+                              System.out.println(l1);
+                              break;
+                          }
+                          case 4:
+                          {
+                              System.out.print("Enter Laptop Id to Remove: ");
+                              theLaptop.deleteById(sc.nextInt());
+                              break;
+                          }
+                          case 5:
+                          {
+                              System.out.print("Enter the imie to delete Laptop Data: ");
+                              theLaptop.deleteByImie(sc.nextLong());
+                              break;
+                          }
+                          case 6:
+                          {
+                              System.out.print("Enter the id to update laptop: ");
+                              theLaptop.updateBrandById(sc.nextInt());
+                              break;
+                          }
+                          case 7:
+                          {
+                              System.out.print("Enter Id to Update Model: ");
+                              theLaptop.updateModelById(sc.nextInt());
+                              break;
+                          }
+                          case 8:
+                          {
+                              System.out.print("Enter Id to Update Price: ");
+                              theLaptop.updatePriceById(sc.nextInt());
+                              break;
+                          }
+                      }
+
+                  }
 
         };
 
