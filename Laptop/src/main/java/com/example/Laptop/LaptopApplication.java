@@ -22,9 +22,9 @@ public class LaptopApplication {
                   {
                       System.out.println("Enter 1 to Add Laptop.");
                       System.out.println("Enter 2 to Find Laptop By ID.");
-                      System.out.println("Enter 3 to Find Laptop By IMIE.");
+                      System.out.println("Enter 3 to Find Laptop By IMEI.");
                       System.out.println("Enter 4 to Delete Laptop By ID.");
-                      System.out.println("Enter 5 to Delete Laptop By IMIE.");
+                      System.out.println("Enter 5 to Delete Laptop By IMEI.");
                       System.out.println("Enter 6 to Update Brand By ID.");
                       System.out.println("Enter 7 to Update Model By ID.");
                       System.out.println("Enter 8 to Update Price By ID.");
@@ -52,7 +52,7 @@ public class LaptopApplication {
                               System.out.print("Enter Laptop Type: ");
                               String type = sc.nextLine();
 
-                              System.out.print("Enter the IMIE number: ");
+                              System.out.print("Enter the IMEI number: ");
                               long imie = sc.nextLong();
 
                               System.out.print("Enter the Price: ");
@@ -78,7 +78,7 @@ public class LaptopApplication {
                           }
                           case 3:
                           {
-                              System.out.print("Enter imie number to Find laptop: ");
+                              System.out.print("Enter IMEI number to Find laptop: ");
                               Laptop l1 = theLaptop.findByImie(sc.nextLong());
                               System.out.println(l1);
                               break;
@@ -91,7 +91,7 @@ public class LaptopApplication {
                           }
                           case 5:
                           {
-                              System.out.print("Enter the imie to delete Laptop Data: ");
+                              System.out.print("Enter the IMEI to delete Laptop Data: ");
                               theLaptop.deleteByImie(sc.nextLong());
                               break;
                           }
