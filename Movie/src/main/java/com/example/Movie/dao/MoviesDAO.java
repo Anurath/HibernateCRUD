@@ -10,4 +10,8 @@ public interface MoviesDAO {
     public void deleteById(int id);
 
     public void updateNameById(int id);
+
+    public void updateDirectorById(int id);
+
+    public  void updateRevenueById(int id);
 }

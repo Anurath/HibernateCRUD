@@ -47,8 +47,14 @@ public class MovieApplication {
 //            System.out.println("Enter the id To Delete The Movie: ");
 //            theMovie.deleteById(sc.nextInt());
 
-            System.out.print("Enter Movie Id To Update Movie Name: ");
-            theMovie.updateNameById(sc.nextInt());
+//            System.out.print("Enter Movie Id To Update Movie Name: ");
+//            theMovie.updateNameById(sc.nextInt());
+
+//            System.out.print("Enter Id To Change Director Name: ");
+//            theMovie.updateDirectorById(sc.nextInt());
+
+            System.out.print("Enter Id to Change Revenue: ");
+            theMovie.updateRevenueById(sc.nextInt());
 
         };
     }

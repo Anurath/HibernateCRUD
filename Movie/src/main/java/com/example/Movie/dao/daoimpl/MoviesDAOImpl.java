@@ -61,4 +61,41 @@ public class MoviesDAOImpl implements MoviesDAO {
             System.out.println("Movie Not Found!");
         }
     }
+
+    @Override
+    @Transactional
+    public void updateDirectorById(int id) {
+        Movie m1 = findById(id);
+        if(m1!=null)
+        {
+            System.out.println(m1);
+            System.out.print("Enter Director Name: ");
+            m1.setDirector(sc.nextLine());
+            System.out.println("Movie Director Name Updated Successfully.");
+            System.out.println(m1);
+        }
+        else {
+            System.out.println("Movie Not Found!");
+        }
+    }
+
+    @Override
+    @Transactional
+    public void updateRevenueById(int id) {
+        Movie m1 = findById(id);
+        if(m1!=null)
+        {
+            System.out.println(m1);
+            System.out.print("Enter Revenue: ");
+            m1.setRevenue(sc.nextLine());
+            System.out.println("Revenue Updated Successfullt.");
+            System.out.println(m1);
+        }
+        else{
+            System.out.println("Movie Not Found!");
+        }
+    }
+
+
+
 }
